@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Hero from "../Components/Hero/Hero";
 import axios from "axios";
 
-import AdminNavbar from "../Components/Navbar/AdminNavbar";
+import VolunteerNavbar from "../Components/Navbar/VolunteerNavbar";
 
 const RenderVolunteer = ({ data }) => {
   const victimData = data.data;
+  const [image, setImage] = useState(null);
 
   if (victimData) {
     return victimData.map((victim) => {
@@ -31,16 +31,16 @@ const RenderVolunteer = ({ data }) => {
                   <b>Helps Needed:</b>
                   <h5 className="title">
                     <span>
-                      {victim.helpNeeded.food == 1 ? <p>Food</p> : ""}
+                      {victim.helpNeeded.food == 2 ? <p>Food</p> : ""}
                     </span>
                     <span>
-                      {victim.helpNeeded.clothes == 1 ? <p>Clothes</p> : ""}
+                      {victim.helpNeeded.clothes == 2 ? <p>Clothes</p> : ""}
                     </span>
                     <span>
-                      {victim.helpNeeded.medical == 1 ? <p>Medical</p> : ""}
+                      {victim.helpNeeded.medical == 2 ? <p>Medical</p> : ""}
                     </span>
                     <span>
-                      {victim.helpNeeded.transport == 1 ? (
+                      {victim.helpNeeded.transport == 2 ? (
                         <p>Transport Support</p>
                       ) : (
                         ""
@@ -52,33 +52,26 @@ const RenderVolunteer = ({ data }) => {
               </div>
             </div>
             <div class="buttoncontainer d-flex flex-row">
-              <form
-                method="PUT"
-                onSubmit={`https://helping-hands-server.herokuapp.com/admin/update/${victim._id}`}
-              >
-                <button className="btn btn-primary mx-2" type="Submit">
-                  Accept
-                </button>
-              </form>
-              <form method="PUT" onSubmit={"/"}>
-                <button className="btn btn-danger mx-2">Rejectt</button>
-              </form>
+              <a href="#">
+                <span>Approve</span>
+              </a>
+              <a href="#">
+                <span>Reject</span>
+              </a>
             </div>
           </div>
-          <hr />
         </div>
       );
-
     });
   } else return <></>;
 };
 
-const Admin = () => {
+const VolunteerClosed = () => {
   const API = axios.create({
     baseURL: "https://helping-hands-server.herokuapp.com"
   });
   const getActiveRequests = async () => {
-    const response = await API.get("/admin/");
+    const response = await API.get("/authority");
     setData(response);
   };
 
@@ -91,7 +84,7 @@ const Admin = () => {
 
   return (
     <>
-      <AdminNavbar />
+      <VolunteerNavbar />
       <section id="hero" className="d-flex align-items-center">
         <div className="container">
           <h1>Welcome to Helping Hands</h1>
@@ -165,4 +158,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default VolunteerClosed;

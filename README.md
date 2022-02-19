@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Helping Hands
+## Disaster management portal to manage climate change crisis
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**[GitHub](https://github.com/technovanza-hackathon) | [Live Demo]()**
+**[Presentation can be found here](https://www.canva.com/design/DAE4yExmyZQ/sXFv_WOreI229g1ms4GeKQ/view?utm_content=DAE4yExmyZQ&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)**
 
-## Available Scripts
+### Team Name: D-Coders
+- [Jeet Mistry](https://www.linkedin.com/in/jeet-mistry-47a866208/) (Team Lead)
+- [Joe Almeida](https://j0sal.github.io/Portfolio/)
+- [Kaushal Joshi](https://twitter.com/clumsy_coder)
+- [Sachin Vishwakarma](https://sachin-v-portfolio.netlify.app/)
 
-In the project directory, you can run:
+## Problem Statement
+Building a tool for disaster management or to manage the climate change crisis
 
-### `npm start`
+## Objective
+To provide immediate help to victims caught in climate disasters
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+- Provide a portal for victims of natural disasters
+- The victims can request for help, needs and requirements
+- The volunteers can register in the website so that they can provide relief materials
+- Authorities manage everything about disasters and volunteers
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Tech-stack
+### Frontend
+- React
+- Bootstrap
+### Backend
+- Node JS
+- Express JS
+### Database
+- MongoDB
+### APIs
+- REST APIs
+- Postman
+### Version Control
+- Git
+- GitHub
+### Hosting
+- Heroku
+- Netlify
