@@ -1,15 +1,24 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 const VolunteerLogin = () => {
+    const API = axios.create({ baseURL: 'https://helping-hands-server.herokuapp.com' });
     const { register, handleSubmit } = useForm();
-    const onSubmit = (data) => {
-        console.log(data);
-
-        console.log("Data Sent Successfully");
-
-        // window.location.reload();
-    };
+    const onSubmit = async (data) => {
+        const response = await API.post('/authority/login', data);
+        console.log(response.data);
+        if (response.data.message === "Login Success") {
+            alert("Login Successfully");
+            window.location.replace("http://localhost:3000/volunteer");
+        } else if (response.data.message === "Incorrect Password") {
+            alert("You Password is Incorrect Kindly Login with Correct Credentials");
+            window.location.reload();
+        } else if (response.data.message === "Authority Not found") {
+            alert("Your Account Doesn't Seem To Exists, Kindly Register First");
+            window.location.replace("http://localhost:3000/volunteersignup");
+        }
+    }
     return (
         <section id="hero" className="d-flex align-items-center justify-content-center row">
             <div className="wrapper col-lg-2">

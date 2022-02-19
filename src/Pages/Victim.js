@@ -8,8 +8,8 @@ const Victim = () => {
     const onSubmit = (data) => {
         data["photo"] = file;
         console.log(data);
-        console.log("Data Sent Successfully");
-        window.location.reload();
+        const response = await API.post('/', data);
+        console.log(response.data);
     };
     return (
         <>

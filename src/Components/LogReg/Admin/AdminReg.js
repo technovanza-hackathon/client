@@ -3,19 +3,20 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
 const AdminReg = () => {
-    const API = axios.create({ baseURL: 'http://localhost:4000' });
+    const API = axios.create({ baseURL: 'https://helping-hands-server.herokuapp.com' });
     const { register, handleSubmit } = useForm();
     const onSubmit = async (data) => {
         // console.log(data);
         if (data.password === data.cpassword) {
             const response = await API.post('/admin/register', data);
-            // console.log(response);
+            alert(response.data.message);
+            window.location.replace("http://localhost:3000/adminlogin");
         } else {
             alert("Password Should be Same in Both the Field : Password, Confirm Password")
         }
         // console.log("Data Sent Successfully");
 
-        // window.location.reload();
+        window.location.reload();
     };
     return (
         <>

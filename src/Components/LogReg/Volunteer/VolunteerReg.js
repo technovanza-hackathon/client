@@ -1,18 +1,25 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 const VolunteerReg = () => {
+    const API = axios.create({ baseURL: 'https://helping-hands-server.herokuapp.com' });
     const { register, handleSubmit } = useForm();
-    const onSubmit = (data) => {
-        console.log(data);
+    const onSubmit = async (data) => {
+        // console.log(data);
         if (data.password === data.cpassword) {
-
+            const response = await API.post('/authority/register', data);
+            if (response.data.message === "Registration Failed") {
+                alert(response.data.message);
+                window.location.replace("http://localhost:3000/volunteersignup");
+            } else {
+                console.log(response);
+                alert(response.data.message);
+                window.location.replace("http://localhost:3000/volunteerlogin");
+            }
         } else {
             alert("Password Should be Same in Both the Field : Password, Confirm Password")
         }
-        console.log("Data Sent Successfully");
-
-        // window.location.reload();
     };
     return (
         <>
@@ -71,14 +78,14 @@ const VolunteerReg = () => {
                             </select>
                             <div className="validate"></div>
                         </div>
-                        <div className="form-field d-flex align-items-center"> <span className="far fa-user"></span> <input type="text" name="additionalInfo" id="additionalInfo" placeholder="Enter Additional Info That you want to say (Optional)" {...register("message", {
+                        <div className="form-field d-flex align-items-center"> <span className="far fa-user"></span> <input type="text" name="additionalInfo" id="additionalInfo" placeholder="Enter Additional Info That you want to say (Optional)" {...register("additionalInfo", {
                             required: false,
                             minLength: 2,
                             maxLength: 100
                         })} /> </div>
                         <button className="btn mt-3">Sign-Up</button>
                     </form>
-                    <div className="text-center fs-6"> <a href="/adminlogin">Already Have an Account</a> ? <a href="/adminlogin">Login</a> </div>
+                    <div className="text-center fs-6"> <a href="/volunteerlogin">Already Have an Account</a> ? <a href="/volunteerlogin">Login</a> </div>
                 </div>
             </section>
         </>
