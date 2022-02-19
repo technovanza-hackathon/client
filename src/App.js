@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import AdminLogin from './Components/LogReg/Admin/AdminLogin'
+import AdminReg from './Components/LogReg/Admin/AdminReg'
+import VolunteerLogin from './Components/LogReg/Volunteer/VolunteerLogin'
+import VolunteerReg from './Components/LogReg/Volunteer/VolunteerReg'
+import Navbar from './Components/Navbar/Navbar'
+import Admin from './Pages/Admin'
+import Home from './Pages/Home'
+import Victim from './Pages/Victim'
+import Volunteer from './Pages/Volunteer'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Navbar />
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/admin' element={<Admin />} />
+          <Route exact path='/victim' element={<Victim />} />
+          <Route exact path='/volunteer' element={<Volunteer />} />
+          <Route exact path='/adminlogin' element={<AdminLogin />} />
+          <Route exact path='/adminsignup' element={<AdminReg />} />
+          <Route exact path='/volunteersignup' element={<VolunteerReg />} />
+          <Route exact path='/volunteerlogin' element={<VolunteerLogin />} />
+        </Routes>
+      </Router>
+
+    </>
+  )
 }
 
-export default App;
+export default App
+
+
+
+
+
