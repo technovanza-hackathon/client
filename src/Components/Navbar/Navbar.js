@@ -20,7 +20,7 @@ const Navbar = () => {
             <header id="header" className="fixed-top">
                 <div className="container d-flex align-items-center">
 
-                    <h1 className="logo me-auto"><a href="index.html" style={{ textDecoration: "none" }}>Helping Hands</a></h1>
+                    <h1 className="logo me-auto"><a href="/" style={{ textDecoration: "none" }}>Helping Hands</a></h1>
 
                     <nav id="navbar" className="navbar order-last order-lg-0">
                         <ul>
@@ -52,7 +52,7 @@ const Navbar = () => {
                         <i className="bi bi-list mobile-nav-toggle"></i>
                     </nav>
 
-                    <a href="#appointment" className="appointment-btn scrollto" style={{ textDecoration: "none" }}><span className="d-none d-md-inline">Make an</span> Appointment</a>
+                    <a href="/victim" className="appointment-btn scrollto" style={{ textDecoration: "none" }}><span className="d-none d-md-inline">Ask for</span> Help</a>
 
                 </div>
             </header>

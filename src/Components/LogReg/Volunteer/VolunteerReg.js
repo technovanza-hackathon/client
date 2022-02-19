@@ -24,12 +24,9 @@ const VolunteerReg = () => {
     };
     return (
         <>
-            <br />
-            <br />
-            <br />
             <Hero />
-            <div className='d-flex justify-content-center align-items-center'>
-                <div className="wrapper col-lg-8">
+            <div className='row d-flex justify-content-center align-items-center'>
+                <div className="wrapper col-lg-4">
                     <div className="logo"> <img src="https://images.unsplash.com/photo-1494386346843-e12284507169?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGFscGluZyUyMGhhbmRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" /> </div>
                     <div className="text-center mt-4 name">Volunteer Registration </div>
                     <form className="p-3 mt-3" onSubmit={handleSubmit(onSubmit)}>
@@ -90,7 +87,6 @@ const VolunteerReg = () => {
                     <div className="text-center fs-6"> <a href="/volunteerlogin">Already Have an Account</a> ? <a href="/volunteerlogin">Login</a> </div>
                 </div>
             </div>
-
         </>
     )
 }
