@@ -1,6 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Disasters = () => {
+    let history = useNavigate();
+    const moveToVictim = () => {
+        history.push("/victim");
+    }
     return (
         <section id="disasters" className="services">
             <div className="container">
@@ -9,8 +14,8 @@ const Disasters = () => {
                     <p>Helping Hands has been working in India for 10 years, focusing on people who have faced disasters and social exclusion. We do this through well-planned and comprehensive programmes in health, education, livelihoods, and disaster preparedness and response. We are part of the Helping Hands International Confederation, working in over 20 countries for a world where all people live with dignity and security.</p>
                 </div>
 
-                <div className="row">
-                    <div className="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div className="row" >
+                    <div className="col-lg-4 col-md-6 d-flex align-items-stretch" onClick={() => window.location.replace("http://localhost:3000/victim")}>
                         <div className="icon-box">
                             <div className="icon"><i class="bi bi-droplet-fill"></i></div>
                             <h4><a href="" style={{ textDecoration: "none" }}>Flood</a></h4>
@@ -18,7 +23,7 @@ const Disasters = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" onClick={() => window.location.replace("http://localhost:3000/victim")}>
                         <div className="icon-box">
                             <div className="icon"><i class="bi bi-tsunami"></i></div>
                             <h4><a href="" style={{ textDecoration: "none" }}>Tsunami</a></h4>
@@ -26,7 +31,7 @@ const Disasters = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" onClick={() => window.location.replace("http://localhost:3000/victim")}>
                         <div className="icon-box">
                             <div className="icon"><i class="bi bi-circle-square"></i></div>
                             <h4><a href="" style={{ textDecoration: "none" }}>Earthquake</a></h4>
@@ -34,7 +39,7 @@ const Disasters = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" onClick={() => window.location.replace("http://localhost:3000/victim")}>
                         <div className="icon-box">
                             <div className="icon"><i className="fas fa-dna"></i></div>
                             <h4><a href="" style={{ textDecoration: "none" }}>Landslide</a></h4>
@@ -42,7 +47,7 @@ const Disasters = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" onClick={() => window.location.replace("http://localhost:3000/victim")}>
                         <div className="icon-box">
                             <div className="icon"><i class="bi bi-water"></i></div>
                             <h4><a href="" style={{ textDecoration: "none" }}>Avalanche</a></h4>
@@ -50,7 +55,7 @@ const Disasters = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" onClick={() => window.location.replace("http://localhost:3000/victim")}>
                         <div className="icon-box">
                             <div className="icon"><i class="bi bi-cloud-drizzle-fill"></i></div>
                             <h4><a href="" style={{ textDecoration: "none" }}>Storm</a></h4>

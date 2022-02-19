@@ -21,7 +21,7 @@ const VolunteerLogin = () => {
     }
     return (
         <section id="hero" className="d-flex align-items-center justify-content-center row">
-            <div className="wrapper col-lg-2">
+            <div className="wrapper col-lg-2" style={{ marginTop: '6rem' }}>
                 <div className="logo"> <img src="https://images.unsplash.com/photo-1494386346843-e12284507169?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGFscGluZyUyMGhhbmRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" /> </div>
                 <div className="text-center mt-4 name">Volunteer Login </div>
                 <form className="p-3 mt-3" onSubmit={handleSubmit(onSubmit)}>

@@ -1,14 +1,19 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import FileBase from 'react-file-base64';
+import axios from 'axios';
 
 const Victim = () => {
     const { register, handleSubmit } = useForm();
+    const API = axios.create({ baseURL: 'https://helping-hands-server.herokuapp.com' });
     let file = "";
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
+        console.log("hello sachin");
         data["photo"] = file;
         console.log(data);
-        const response = await API.post('/', data);
+        const response = await API.post('/victim/register', data);
+        alert(response.data.message + " Kindly Check Your Mail for Further Details");
+        window.location.replace("http://localhost:3000/");
         console.log(response.data);
     };
     return (
@@ -28,35 +33,29 @@ const Victim = () => {
                         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                     </div>
 
-                    <form method="post" role="form" className="php-email-form" onSubmit={handleSubmit(onSubmit)}>
+                    <form className="php-email-form" onSubmit={handleSubmit(onSubmit)}>
                         <div className='row'>
                             <div className="col-md-3 form-group">
                                 <input required type="text" name="name" className="form-control" id="name" placeholder="Enter Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" {...register("name", {
-                                    required: true,
-                                    minLength: 3,
-                                    maxLength: 20
+                                    required: true
                                 })} />
                                 <div className="validate"></div>
                             </div>
                             <div className="col-md-3 form-group mt-3 mt-md-0">
                                 <input required type="text" name="email" className="form-control" id="email" placeholder="Enter Your Email" data-rule="minlen:4" data-msg="Please enter at a Valid Email" {...register("email", {
-                                    required: true,
-                                    minLength: 8,
-                                    maxLength: 20
+                                    required: true
                                 })} />
                                 <div className="validate"></div>
                             </div>
                             <div className="col-md-3 form-group mt-3 mt-md-0">
                                 <input required type="text" className="form-control" name="disasterAddress" id="address" placeholder="Enter Your Address" data-rule="address" data-msg="Please enter a Valid Address" {...register("disasterAddress", {
-                                    required: true,
-                                    minLength: 3
+                                    required: true
                                 })} />
                                 <div className="validate"></div>
                             </div>
                             <div className="col-md-3 form-group mt-3 mt-md-0">
                                 <input required type="text" className="form-control" name="location" id="location" placeholder="Enter Your Location" data-rule="location" data-msg="Please enter a Valid Location" {...register("location", {
-                                    required: true,
-                                    minLength: 3
+                                    required: true
                                 })} />
                                 <div className="validate"></div>
                             </div>
@@ -64,25 +63,19 @@ const Victim = () => {
                         <div className='row'>
                             <div className="col-md-4 form-group mt-3">
                                 <input required type="number" className="form-control" name="pincode" id="pincode" placeholder="Enter Your Pin Code" data-rule="email" data-msg="Please enter a Valid Address" {...register("pincode", {
-                                    required: true,
-                                    minLength: 6,
-                                    maxLength: 6
+                                    required: true
                                 })} />
                                 <div className="validate"></div>
                             </div>
                             <div className="col-md-4 form-group mt-3">
                                 <input required type="number" className="form-control" name="contactNo" id="contactNo" placeholder="Enter Your Phone Number" data-rule="contactNo" data-msg="Please enter a Valid Phone Number" {...register("contactNo", {
-                                    required: true,
-                                    minLength: 10,
-                                    maxLength: 10
+                                    required: true
                                 })} />
                                 <div className="validate"></div>
                             </div>
                             <div className="col-md-4 form-group mt-3">
                                 <input required type="number" className="form-control" name="aadhar" id="aadhar" placeholder="Enter Your Aadhar Number" data-rule="aadhar" data-msg="Please enter a Valid Aadhar Number" {...register("aadhar", {
-                                    required: true,
-                                    minLength: 16,
-                                    maxLength: 16
+                                    required: true
                                 })} />
                                 <div className="validate"></div>
                             </div>
@@ -156,7 +149,8 @@ const Victim = () => {
                             <div className="error-message"></div>
                             <div className="sent-message">Your appointment request has been sent successfully. Thank you!</div>
                         </div>
-                        <div className="text-center"><button type="submit">Request</button></div>
+                        <div className="text-center">
+                            <button type="submit">Request</button></div>
                     </form>
 
                 </div>

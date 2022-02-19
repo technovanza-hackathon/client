@@ -36,7 +36,7 @@ const Department = () => {
                                             <h3>Clothes</h3>
                                             <p className="fst-italic">Helping Hands is one of the most well-known places to donate used clothes (and tons of other things too!)..</p>
                                             <p>The non-profit is funded by a massive network of retail thrift stores across the country. Revenue from the stores goes directly toward helping individuals find employment and grow their careers by providing them with job training, placement services and other community-based programs. Anything they can't sell, Helping Hands will forward to recycling organizations that will help the items avoid the landfill.</p>
-                                            <a style={{ textDecoration: "none", border: '1px solid #1977cc', borderRadius: "50px", letterSpacing: "1px", display: "inline-block", textTransform: "uppercase", padding: "12px 35px", marginTop: "30px", transition: "0.5s" }} href="" className="btn-get-started scrollto">Register Volunteer</a>
+                                            <a style={{ textDecoration: "none", border: '1px solid #1977cc', borderRadius: "50px", letterSpacing: "1px", display: "inline-block", textTransform: "uppercase", padding: "12px 35px", marginTop: "30px", transition: "0.5s" }} href="/volunteersignup" className="btn-get-started scrollto">Register Volunteer</a>
                                         </div>
                                         <div className="col-lg-4 text-center order-1 order-lg-2">
                                             <img src="assets/img/departments-1.jpg" alt="" className="img-fluid" />
@@ -49,7 +49,7 @@ const Department = () => {
                                             <h3>Food</h3>
                                             <p className="fst-italic">Saving lives in emergencies</p>
                                             <p>Helping Hands is one of the first agencies on the ground in global emergencies caused by conflict, climate shocks, pandemics and other disasters. We provide life-saving support to people at risk of going hungry, and we coordinate the response of the global humanitarian community to large-scale emergencies.</p>
-                                            <a style={{ textDecoration: "none", border: '1px solid #1977cc', borderRadius: "50px", letterSpacing: "1px", display: "inline-block", textTransform: "uppercase", padding: "12px 35px", marginTop: "30px", transition: "0.5s" }} href="" className="btn-get-started scrollto">Register Volunteer</a>
+                                            <a style={{ textDecoration: "none", border: '1px solid #1977cc', borderRadius: "50px", letterSpacing: "1px", display: "inline-block", textTransform: "uppercase", padding: "12px 35px", marginTop: "30px", transition: "0.5s" }} href="/volunteersignup" className="btn-get-started scrollto">Register Volunteer</a>
                                         </div>
                                         <div className="col-lg-4 text-center order-1 order-lg-2">
                                             <img src="assets/img/departments-3.jpg" alt="" className="img-fluid" />
@@ -62,7 +62,7 @@ const Department = () => {
                                             <h3>Medical Kits</h3>
                                             <p className="fst-italic">Helping Hands is one of the most well-known places to donate used clothes (and tons of other things too!)..</p>
                                             <p>The non-profit is funded by a massive network of retail thrift stores across the country. Revenue from the stores goes directly toward helping individuals find employment and grow their careers by providing them with job training, placement services and other community-based programs. Anything they can't sell, Helping Hands will forward to recycling organizations that will help the items avoid the landfill.</p>
-                                            <a style={{ textDecoration: "none", border: '1px solid #1977cc', borderRadius: "50px", letterSpacing: "1px", display: "inline-block", textTransform: "uppercase", padding: "12px 35px", marginTop: "30px", transition: "0.5s" }} href="" className="btn-get-started scrollto">Register Volunteer</a>
+                                            <a style={{ textDecoration: "none", border: '1px solid #1977cc', borderRadius: "50px", letterSpacing: "1px", display: "inline-block", textTransform: "uppercase", padding: "12px 35px", marginTop: "30px", transition: "0.5s" }} href="/volunteersignup" className="btn-get-started scrollto">Register Volunteer</a>
                                         </div>
                                         <div className="col-lg-4 text-center order-1 order-lg-2">
                                             <img src="assets/img/departments-3.jpg" alt="" className="img-fluid" />
@@ -75,7 +75,7 @@ const Department = () => {
                                             <h3>Transport Support</h3>
                                             <p className="fst-italic">Transport Support for Poor Victim</p>
                                             <p>Helping Hands provides feeding stations, first aid, temporary shelter, cleaning supplies, hygiene kits, food, clothing, emergency transportation, home repairs, and medical supplies. Handling both small house fires and large-scale natural disasters, ARC deploys as necessary to make sure people have clean water, safe shelter, and hot meals during times of need.</p>
-                                            <a style={{ textDecoration: "none", border: '1px solid #1977cc', borderRadius: "50px", letterSpacing: "1px", display: "inline-block", textTransform: "uppercase", padding: "12px 35px", marginTop: "30px", transition: "0.5s" }} href="/transport" className="btn-get-started scrollto">Register Volunteer</a>
+                                            <a style={{ textDecoration: "none", border: '1px solid #1977cc', borderRadius: "50px", letterSpacing: "1px", display: "inline-block", textTransform: "uppercase", padding: "12px 35px", marginTop: "30px", transition: "0.5s" }} href="/volunteersignup" className="btn-get-started scrollto">Register Volunteer</a>
                                         </div>
                                         <div className="col-lg-4 text-center order-1 order-lg-2">
                                             <img src="assets/img/departments-4.jpg" alt="" className="img-fluid" />
